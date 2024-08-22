@@ -3,10 +3,15 @@
 Creating a pascals triangle
 """
 def pascal_triangle(n):
-    if n <= 0:
-        return []
     triangle = []
+    if n <= 0:
+        return triangle
     for row in range(n):
-        triangle_row = [1 if j == 0 or j == row else triangle[row - 1][j - 1] + triangle[row - 1][j] for j in range(row + 1)]
-        triangle.append(triangle_row)
+        n_row = []
+        triangle.append(n_row)
+        n_row.append(1)
+        for j in range(1, row):
+            n_row.append(triangle[row - 1][j - 1] + triangle[row - 1][j])
+        if row > 0:
+            n_row.append(1)
     return triangle
