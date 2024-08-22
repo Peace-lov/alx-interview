@@ -1,8 +1,15 @@
 #!/usr/bin/python3
 """
-Creating a pascals triangle
+Creating a function def pascal_triangle(n): that returns
+a list of lists of integers representing the Pascal’s triangle of n
 """
 def pascal_triangle(n):
+    """
+    Returns an empty list if n <= 0
+    list of integers 'n'
+    Args:
+    n (int): base number for calculating triangle
+    """
     triangle = []
     if n <= 0:
         return triangle
