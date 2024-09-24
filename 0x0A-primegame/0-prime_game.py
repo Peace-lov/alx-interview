@@ -8,17 +8,17 @@ def isWinner(x, nums):
         return None
     n = max(nums)
     ft = [True for _ in range(max(n + 1, 2))]
-    for i in range(2, int(pow(n, 0.5)) + 1):
-        if not ft[i]:
+    for a in range(2, int(pow(n, 0.5)) + 1):
+        if not ft[a]:
             continue
-        for j in range(i * i, n + 1, i):
-            ft[j] = False
+        for b in range(a * a, n + 1, a):
+            ft[b] = False
     ft[0] = ft[1] = False
     c = 0
-    for i in range(len(ft)):
-        if ft[i]:
+    for a in range(len(ft)):
+        if ft[a]:
             c += 1
-        ft[i] = c
+        ft[a] = c
     ply1 = 0
     for n in nums:
         ply1 += ft[n] % 2 == 1
