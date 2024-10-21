@@ -4,7 +4,9 @@
 
 def minOperations(n):
     """
-    Calculating the fewest number of operations needed to result in exactly n H characters
+    Calculating the fewest number of
+    operations needed to result in exactly
+    n H characters
     """
     if (n < 2):
         return 0
